@@ -1,0 +1,155 @@
+/* chatbot.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.chat-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chat-header h1 {
+  font-size: 2rem;
+  color: #00ffe0;
+}
+
+.chat-header p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.chat-window {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  max-height: 65vh;
+  box-shadow: 0 0 20px rgba(0, 255, 224, 0.2);
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: rgba(0, 255, 224, 0.1);
+  border: 1px solid #00ffe0;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00ffe0;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.chat-input input::placeholder {
+  color: #bbb;
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  background: #00ffe0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #00bfa5;
+}
+
+.dashboard-button {
+  padding: 10px 18px;
+  background: #00ffe0;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background: #00bfa5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .chat-window {
+    max-height: 50vh;
+  }
+
+  .chat-input input {
+    font-size: 0.9rem;
+  }
+
+  .chat-input button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .dashboard-button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

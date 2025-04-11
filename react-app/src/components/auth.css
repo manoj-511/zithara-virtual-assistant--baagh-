@@ -1,0 +1,93 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f1b; /* dark deep blueish black */
+  background-image: radial-gradient(circle at top left, #1a1a2e, #0f0f1b);
+}
+
+.auth-container {
+  width: 340px;
+  padding: 30px 25px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #ffffff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.auth-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #00ffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+}
+
+.auth-form input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1e1e2f;
+  color: white;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #00bcd4;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background: linear-gradient(to right, #00bcd4, #673ab7);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+}
+
+.auth-form a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-form a:hover {
+  color: #66fcf1;
+}
+
+.success-message {
+  color: #00ff95;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
